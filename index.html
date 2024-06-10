@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Chilltea🧋</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
     body {
         margin: 0;
@@ -14,6 +15,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        flex-direction: column;
     }
 
     body.dark-mode {
@@ -21,118 +23,142 @@
         color: #fff; /* White text in dark mode */
     }
     
-    
     h1 {
-    text-align: center;
-    margin-top: 50px;
-    color: #007bff; /* Blue heading color */
-    font-size: 36px; /* Increased font size */
-    font-weight: bold; /* Bold text */
-    text-transform: uppercase; /* Uppercase text */
-    opacity: 0; /* Initially hide the text */
-    animation: fadeInSlideHeader 2s forwards; /* Fade-in and slide animation */
-}
-
-@keyframes fadeInSlideHeader {
-    from {
-        opacity: 0;
-        transform: translateY(50px); /* Start position below */
+        text-align: center;
+        margin-top: 50px;
+        color: #007bff; /* Blue heading color */
+        font-size: 36px; /* Increased font size */
+        font-weight: bold; /* Bold text */
+        text-transform: uppercase; /* Uppercase text */
+        opacity: 0; /* Initially hide the text */
+        animation: fadeInSlideHeader 2s forwards; /* Fade-in and slide animation */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Move the element to its original position */
+
+    @keyframes fadeInSlideHeader {
+        from {
+            opacity: 0;
+            transform: translateY(50px); /* Start position below */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0); /* Move the element to its original position */
+        }
     }
-}
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    opacity: 0; /* Initially hide the links */
-    animation: fadeInSlideLinks 2s forwards; /* Fade-in and slide animation */
-}
-
-@keyframes fadeInSlideLinks {
-    from {
-        opacity: 0;
-        transform: translateY(50px); /* Start position below */
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0; /* Initially hide the links */
+        animation: fadeInSlideLinks 2s forwards; /* Fade-in and slide animation */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Move the element to its original position */
+
+    @keyframes fadeInSlideLinks {
+        from {
+            opacity: 0;
+            transform: translateY(50px); /* Start position below */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0); /* Move the element to its original position */
+        }
     }
-}
 
-li {
-    margin-bottom: 35px; /* Set margin between buttons */
-    opacity: 0; /* Initially hide the links */
-    animation: slideInLinks 0.5s forwards; /* Slide animation for each link */
-}
-
-@keyframes slideInLinks {
-    from {
-        opacity: 0;
-        transform: translateY(100px); /* Start the animation from 100px below */
+    li {
+        margin-bottom: 35px; /* Set margin between buttons */
+        opacity: 0; /* Initially hide the links */
+        animation: slideInLinks 0.5s forwards; /* Slide animation for each link */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Move the element to its original position */
+
+    @keyframes slideInLinks {
+        from {
+            opacity: 0;
+            transform: translateY(100px); /* Start the animation from 100px below */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0); /* Move the element to its original position */
+        }
     }
-}
 
-li:nth-child(1) {
-    animation-delay: 2s; /* Start the animation for the first link after 2 seconds */
-}
+    li:nth-child(1) {
+        animation-delay: 2s; /* Start the animation for the first link after 2 seconds */
+    }
 
-li:nth-child(2) {
-    animation-delay: 2.5s; /* Start the animation for the second link after 2.5 seconds */
-}
+    li:nth-child(2) {
+        animation-delay: 2.5s; /* Start the animation for the second link after 2.5 seconds */
+    }
 
-li:nth-child(3) {
-    animation-delay: 3s; /* Start the animation for the third link after 3 seconds */
-}
+    li:nth-child(3) {
+        animation-delay: 3s; /* Start the animation for the third link after 3 seconds */
+    }
 
-li:nth-child(4) {
-    animation-delay: 3.5s; /* Start the animation for the fourth link after 3.5 seconds */
-}
+    li:nth-child(4) {
+        animation-delay: 3.5s; /* Start the animation for the fourth link after 3.5 seconds */
+    }
 
-a {
-    text-decoration: none;
-    padding: 15px 25px; /* Increased padding for better touch targets */
-    border: 2px solid #007bff; /* Blue border */
-    border-radius: 5px; /* Rounded corners */
-    transition: all 0.3s ease;
-    background-color: transparent; /* Transparent background */
-    font-size: 18px; /* Increased font size */
-    font-weight: bold; /* Bold text */
-    text-transform: uppercase; /* Uppercase text */
-    color: #007bff; /* Default text color */
-}
+    a {
+        text-decoration: none;
+        padding: 15px 25px; /* Increased padding for better touch targets */
+        border: 2px solid #007bff; /* Blue border */
+        border-radius: 5px; /* Rounded corners */
+        transition: all 0.3s ease;
+        background-color: transparent; /* Transparent background */
+        font-size: 18px; /* Increased font size */
+        font-weight: bold; /* Bold text */
+        text-transform: uppercase; /* Uppercase text */
+        color: #007bff; /* Default text color */
+    }
 
-a:hover {
-    background-color: #007bff; /* Blue background on hover */
-    color: #fff; /* White text on hover */
-}
+    a:hover {
+        background-color: #007bff; /* Blue background on hover */
+        color: #fff; /* White text on hover */
+    }
 
+    .footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #007bff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Space between items */
+    }
+
+    .footer a {
+        font-size: 24px; /* Increased icon size */
+        color: #007bff; /* Default icon color */
+        transition: color 0.3s ease;
+        border: none; /* Remove border */
+        padding: 0; /* Remove padding */
+    }
+
+    .footer a:hover {
+        color: #ff0000; /* Change icon color on hover for YouTube */
+        background-color: transparent; /* Ensure background remains transparent */
+    }
+
+    .footer a.discord:hover {
+        color: #5865F2; /* Change icon color on hover for Discord */
+    }
   </style>
 </head>
 <body>
-<h1>Chilltea🧋. Bypass like a Pro.😎</h1>
+  <h1>Chilltea🧋. Bypass like a Pro.😎</h1>
 
-<ul>
+  <ul>
     <li><a href="./games/browser/index.html">Games</a></li>
     <li><a href="./bypasser/index.html">Bypasser</a></li>
     <li><a href="https://www.mediafire.com/file/0eobn80o88qdmb1/Minecraft_1.14.4_Portable.zip">Minecraft Portable</a></li>
     <li><a href="./bypasser/HtBS.html">Input Block Bypass Manual</a></li>
-</ul>
-  <li><a herf="youtube.com/@Moonlight.client">Our Youtube</a></li>
+  </ul>
+
+  <div class="footer">
+    <a href="https://youtube.com/@Moonlight.client" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://discord.com/invite/PWVfDmc2x7" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+    <span>NeonStudios Project &copy;</span>
+  </div>
 </body>
-  NeonStudios Project;copy
 </html>
-<!--nix machen -->
-
-
-
-
-
-
