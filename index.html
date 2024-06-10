@@ -157,8 +157,35 @@
 
   <div class="footer">
     <a href="https://youtube.com/@Moonlight.client" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://discord.com/invite/PWVfDmc2x7" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+    <a href="https://discord.com/invite/example" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
     <span>NeonStudios Project &copy;</span>
   </div>
+
+  <div id="visit-counter" style="margin-top: 20px; color: #007bff;"></div>
+
+  <script>
+    // Function to get and increment the visit count
+    function updateVisitCount() {
+        // Get the visit count from localStorage
+        let visitCount = localStorage.getItem('visitCount');
+        
+        // If visitCount is null, initialize it to 0
+        if (!visitCount) {
+            visitCount = 0;
+        }
+
+        // Increment the visit count
+        visitCount++;
+
+        // Save the updated visit count back to localStorage
+        localStorage.setItem('visitCount', visitCount);
+
+        // Update the visit counter display
+        document.getElementById('visit-counter').innerText = `Visits: ${visitCount}`;
+    }
+
+    // Call the function to update the visit count on page load
+    updateVisitCount();
+  </script>
 </body>
 </html>
